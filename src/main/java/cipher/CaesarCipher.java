@@ -1,5 +1,12 @@
 package cipher;
+import org.openjdk.jmh.annotations.*;
 
+import java.util.concurrent.TimeUnit;
+
+@BenchmarkMode(Mode.AverageTime)
+@Fork(value = 1)
+@Warmup(iterations = 3)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class CaesarCipher {
     public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 
@@ -42,4 +49,18 @@ public class CaesarCipher {
         }
         return message;
     }
+
+    @Benchmark
+    public void testEncrypt(){
+        encrypt("Hello Everyone", 2);
+    }
+
+    @Benchmark
+    public void testDecrypt(){
+
+        decrypt("Hello Everyone", 2);
+
+    }
+
+
 }
