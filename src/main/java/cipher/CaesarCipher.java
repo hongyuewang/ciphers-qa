@@ -50,17 +50,17 @@ public class CaesarCipher {
         return message;
     }
 
-    @Benchmark
-    public void testEncrypt(){
-        encrypt("Hello Everyone", 2);
-    }
-
-    @Benchmark
-    public void testDecrypt(){
-
-        decrypt("Hello Everyone", 2);
-
-    }
+//    @Benchmark
+//    public void testEncrypt(){
+//        encrypt("Hello Everyone", 2);
+//    }
+//
+//    @Benchmark
+//    public void testDecrypt(){
+//
+//        decrypt("Hello Everyone", 2);
+//
+//    }
 
 
 }
