@@ -4,8 +4,8 @@ import org.openjdk.jmh.annotations.*;
 import java.util.concurrent.TimeUnit;
 
 @BenchmarkMode(Mode.AverageTime)
-@Fork(value = 1)
-@Warmup(iterations = 3)
+@Fork(value = 2)
+@Warmup(iterations = 1)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class CaesarCipher {
     public static final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
@@ -52,14 +52,12 @@ public class CaesarCipher {
 
 //    @Benchmark
 //    public void testEncrypt(){
-//        encrypt("Hello Everyone", 2);
+//        encrypt("Hello Everyone", 10);
 //    }
 //
 //    @Benchmark
 //    public void testDecrypt(){
-//
-//        decrypt("Hello Everyone", 2);
-//
+//        decrypt("Mjqqt Jajwdtsj", 5);
 //    }
 
 
